@@ -352,7 +352,8 @@ class ReactExoplayerView extends FrameLayout implements
             public void onPlayerStateChanged(boolean playWhenReady, int playbackState) {
                 reLayout(playPauseControlContainer);
                 //Remove this eventListener once its executed. since UI will work fine once after the reLayout is done
-                player.removeListener(eventListener);
+                // Update comment the update as the play button or the pause will not be rendered in the first time you toggle
+                //player.removeListener(eventListener);
             }
         };
         player.addListener(eventListener);
